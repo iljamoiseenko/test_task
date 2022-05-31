@@ -1,0 +1,351 @@
+@import '../variables.scss'; 
+
+.listing {
+    max-width: 1240px;
+    margin: 0 auto;
+    background-color: green;
+    &__title {
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 75px;
+        text-transform: uppercase;
+        color: $color-secondary-100;
+        margin: 98px 0px 80px 0 ;
+        text-align: center;
+    }
+    &__cart-block--img {
+        position: relative;
+    }
+    &__sold {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        h3 {
+            font-weight: 700;
+            font-size: 50px;
+            line-height: 75px;
+            color: $Color-secondary-500;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+    }
+
+    &__cart-block-item {
+        padding-bottom: 20px;
+        img {
+            width: 100%;
+        }
+        &:hover {
+            .car-name {
+                text-decoration: underline;
+            }
+        }
+        
+        .badge {
+            display: none;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 18px;
+            color: $color-secondary-500;
+            padding: 3px 20px;
+            background-color: #000;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 0;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 10;
+
+        }
+        .badge-active {
+            
+                display: block!important;
+            
+        }
+    }
+
+    &__cart-block-item-info {
+        background: #FFFFFF;
+        box-shadow: 0px 0px 18px rgba(68, 68, 68, 0.09);
+        padding: 20px;
+        .car-year {
+            font-size: 17px;
+            line-height: 26px;
+            color: $color-secondary-200;
+        }
+        .car-name-block {
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 23px;
+            color: #000000;
+            padding: 0px 0px 18px 0px;
+            margin: 0;
+        }
+        .car-info-block {
+            position: relative;
+            span {
+                font-weight: 300;
+                font-size: 14px;
+                line-height: 19px;
+                color: $color-secondary-200;
+                margin-right: 16px;
+                &:after {
+                    content: '';
+                    width: 1px;
+                    height: 18px;
+                    background: $color-secondary-200;
+                    position: absolute;
+                    margin-left: 8px;
+                    top: 4px;
+                    &:last-child {
+                        display: none;
+                    }
+                }
+            }
+            .car-fuel-type:after {
+                display: none;
+            }
+        }
+        .car-price {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 27px;
+            color: $color-primary-100;
+            padding-top: 26px;
+        }
+    }
+    &__filters {
+        margin-bottom: 40px;
+        display: flex;
+        gap: 20px;
+        .filter-btn {
+            padding: 13px 43px 13px 16px;
+            border: 1px solid #BDBDBD;
+            border-radius: 15px;
+            margin-bottom: 40px;
+        
+        
+        }
+          
+        .filter-block {
+            list-style: none;
+            margin: 0;
+            padding-left: 16px;
+            display: none;   
+        }
+        .disp {
+            display:block;
+        }
+        .menu {
+            color: red;
+            border-bottom-left-radius: none;
+            border-bottom-right-radius: none;
+            
+        } 
+
+    }
+    &__btn {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+        color: #F8F8F8;
+        padding: 14px 120px;
+        background: #DF4E3C;
+        border-radius: 15px;
+        border: 1px solid transparent;
+        
+        &:hover {
+            background-color: #E5E5E5;
+            transition: .5s;
+            border: 1px solid #DF4E3C;
+            color: #DF4E3C;
+        }
+        &:focus {
+            background-color: #DF4E3C;
+            color: #F8F8F8;
+        }
+          
+        
+    }
+    &__sort {
+        margin-bottom: 23px;
+    }
+    &__sort--block {
+        display: flex;
+    }
+    &__sort--arrows {
+        position: relative;
+        width: 18px;
+        height: 18px;
+        .arrow-up {
+            position: absolute;
+            top: 4px;
+            left: 3px;
+        }
+        .arrow-down {
+            position: absolute;
+            bottom: 0px;
+            right: 3px;
+        }
+    }
+    &__checkbox {
+        display: flex;
+        align-items: center;
+        p {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+            color: $color-secondary-200;
+            margin: 0;
+
+        }
+    }
+    .custom-select {
+        position: relative;
+    }
+      
+    .custom-select select {
+        display: none;
+    }
+      
+    .select-selected {
+        background-color: transparent;
+    }
+      
+    
+    .select-selected:after {
+        position: absolute;
+        content: "";
+        background-image: url(/src/image/arrow-down.svg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        top: 21px;
+        right: 16px;
+        display: block;
+        width: 13px;
+        height: 8px;
+    }
+      
+    .select-selected.select-arrow-active:after {
+        display: none;
+    }
+    
+    .select-selected { 
+        color: #000;
+        padding: 13px 43px 13px 16px;
+        border: 1px solid #BDBDBD;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+        &:hover {
+            cursor: pointer;
+        }
+        &::selection {
+            border-color: green;
+        }
+    }
+    
+      
+    .select-arrow-active {
+        border-bottom: 1px solid transparent;
+        border-bottom-left-radius: 0!important;
+        border-bottom-right-radius: 0!important;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 12px;
+        background-color: #fff;  
+    }
+    .select-items div {
+        cursor: pointer;
+        user-select: none;
+        padding: 10px 0;
+        line-height: 12px;
+        &:first-child {
+            padding-top: 7px;
+        }
+    }
+      
+    .select-items {
+        position: absolute;
+        background-color: #fff;
+        top: 100%;
+        left: 0;
+        right: 0;
+        top: 40px;
+        z-index: 99;
+        border: solid 1px #BDBDBD;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border-top: none;
+        padding: 0px 13px 0 16px;
+    }
+      
+    .select-hide {
+        display: none;
+    }
+      
+    .select-items div:hover, .same-as-selected {
+        color: #DF4E3C;
+    }
+    
+    input[type="checkbox"] {
+        height: 20px;
+        width: 20px;
+        margin: 0;
+        padding: 0;
+        opacity: 1;
+        appearance: none;
+        border: 1px solid #8D8D8D;
+        border-radius: 7px;
+        background: #fff;
+        position: relative;
+        margin-right: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+      
+    input[type="checkbox"]:checked {
+        border: 1px solid #DF4E3C;;
+        background: #DF4E3C;
+    }
+      
+    input[type="checkbox"]:checked:after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        background-image: url(src/image/check-solid.svg);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    input[type="checkbox"]:focus {
+        outline: none;
+    }
+    @media (max-width: 1280px) {
+        .row {
+            padding: 0 20px;
+            width: 100%;
+            margin: 0;
+        } 
+        &__filters {
+            padding: 0 20px;
+        }
+    }
+}
+
+
+

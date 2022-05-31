@@ -1,0 +1,503 @@
+.listing {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+.listing__title {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 75px;
+  text-transform: uppercase;
+  color: #AEAEAE;
+  margin: 98px 0px 80px 0;
+  text-align: center;
+}
+.sold {
+  filter: grayscale(100%);
+}
+.sold .listing__sold {
+  display: block;
+}
+.listing__sold {
+  position: absolute;
+  top: 63px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: none;
+  
+}
+.listing__sold h3 {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 75px;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.listing__cart-block--img {
+  position: relative;
+}
+.listing__cart-block-item {
+  padding-bottom: 20px;
+  position: relative;
+}
+.listing__cart-block-item img {
+  width: 100%;
+}
+.listing__cart-block-item:hover .car-name {
+  text-decoration: underline;
+}
+.listing__cart-block-item .badge {
+  display: none;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #ffffff;
+  padding: 3px 20px;
+  background-color: #000;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+.listing__cart-block-item .badge-active {
+  display: block !important;
+}
+.listing__cart-block-item-info {
+  background: #FFFFFF;
+  box-shadow: 0px 0px 18px rgba(68, 68, 68, 0.09);
+  padding: 20px;
+}
+.listing__cart-block-item-info .car-year {
+  font-size: 17px;
+  line-height: 26px;
+  color: #8D8D8D;
+}
+.listing__cart-block-item-info .car-name-block {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 23px;
+  color: #000000;
+  padding: 0px 0px 18px 0px;
+  margin: 0;
+}
+.listing__cart-block-item-info .car-info-block {
+  position: relative;
+}
+.listing__cart-block-item-info .car-info-block span {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 19px;
+  color: #8D8D8D;
+  margin-right: 16px;
+}
+.listing__cart-block-item-info .car-info-block span:after {
+  content: "";
+  width: 1px;
+  height: 18px;
+  background: #8D8D8D;
+  position: absolute;
+  margin-left: 8px;
+  top: 4px;
+}
+.listing__cart-block-item-info .car-info-block span:after:last-child {
+  display: none;
+}
+.listing__cart-block-item-info .car-info-block .car-fuel-type:after {
+  display: none;
+}
+.listing__cart-block-item-info .car-price {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 27px;
+  color: #000;
+  padding-top: 26px;
+}
+.listing__filters {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
+}
+.listing__filters .filter-btn {
+  padding: 13px 43px 13px 16px;
+  border: 1px solid #BDBDBD;
+  border-radius: 15px;
+  margin-bottom: 40px;
+}
+.listing__filters .filter-block {
+  list-style: none;
+  margin: 0;
+  padding-left: 16px;
+  display: none;
+}
+.listing__filters .disp {
+  display: block;
+}
+.listing__filters .menu {
+  color: red;
+  border-bottom-left-radius: none;
+  border-bottom-right-radius: none;
+}
+.listing__btn {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  color: #F8F8F8;
+  padding: 14px 120px;
+  background: #DF4E3C;
+  border-radius: 15px;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+.listing__btn:hover {
+  background-color: #E5E5E5;
+  transition: 0.5s;
+  border: 1px solid #DF4E3C;
+  color: #DF4E3C;
+}
+.listing__btn:focus {
+  background-color: #DF4E3C;
+  color: #F8F8F8;
+}
+.listing__sort {
+  margin-bottom: 23px;
+}
+.listing__sort--block {
+  display: flex;
+  align-items: baseline;
+  position: relative;
+}
+.listing__sort--arrows {
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+.listing__sort--arrows .arrow-up {
+  position: absolute;
+  top: 4px;
+  left: 3px;
+}
+.listing__sort--arrows .arrow-down {
+  position: absolute;
+  bottom: 0px;
+  right: 3px;
+}
+.listing__checkbox {
+  display: flex;
+  align-items: center;
+}
+.listing__checkbox p {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #8D8D8D;
+  margin: 0;
+}
+.listing__sort {
+  display: flex;
+  justify-content: space-between;
+}
+.sort-dropdown {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: right;
+  color: #8D8D8D;
+}
+.sort-dropdown:hover {
+  color: #DF4E3C;
+  cursor: pointer;
+}
+
+.sort-dropdown-items {
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: -20px;
+  z-index: 10;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 12px;
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+
+}
+.sort-dropdown-items p {
+  margin: 0;
+}
+.sort-dropdown-items p:hover {
+  cursor: pointer;
+  color: #DF4E3C;
+
+}
+.open-dropdown {
+  display: block;
+}
+@media (max-width: 1280px) {
+  .listing .row {
+    padding: 0 20px;
+    width: 100%;
+    margin: 0;
+  }
+  .listing__filters, .listing__sort {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 950px) {
+  .listing__filters {
+    flex-direction: column;
+  }
+  .listing__filters .custom-select {
+    width: 100%!important;
+  }
+}
+
+.custom-select {
+  position: relative;
+}
+
+.custom-select select {
+  display: none;
+}
+
+.select-selected {
+  background-color: transparent;
+}
+
+.select-selected:after {
+  position: absolute;
+  content: "";
+  background-image: url(src/image/arrow-down.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 21px;
+  right: 16px;
+  display: block;
+  width: 13px;
+  height: 8px;
+}
+
+.select-selected.select-arrow-active:after {
+  display: none;
+}
+
+.select-selected {
+  color: #000;
+  padding: 13px 43px 13px 16px;
+  border: 1px solid #BDBDBD;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+}
+.select-selected:hover {
+  cursor: pointer;
+}
+.select-selected::-moz-selection {
+  border-color: green;
+}
+.select-selected::selection {
+  border-color: green;
+}
+
+.select-arrow-active {
+  border-bottom: 1px solid transparent;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 12px;
+  background-color: #fff;
+}
+
+.select-items div {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding: 10px 0;
+  line-height: 12px;
+}
+.select-items div:first-child {
+  padding-top: 7px;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: #fff;
+  top: 100%;
+  left: 0;
+  right: 0;
+  top: 40px;
+  z-index: 99;
+  border: solid 1px #BDBDBD;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top: none;
+  padding: 0px 13px 0 16px;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  color: #DF4E3C;
+}
+
+/* custom checkbox */
+input[type=checkbox] {
+  height: 20px;
+  width: 20px;
+  margin: 0;
+  padding: 0;
+  opacity: 1;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid #8D8D8D;
+  border-radius: 7px;
+  background: #fff;
+  position: relative;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type=checkbox]:checked {
+  border: 1px solid #DF4E3C;
+  background: #DF4E3C;
+}
+
+input[type=checkbox]:checked:after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-image: url(../../image/check-solid.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type=checkbox]:focus {
+  outline: none;
+}
+
+
+
+
+.custom-select {
+  position: relative;
+}
+
+.custom-select select {
+  display: none;
+}
+
+.select-selected {
+  background-color: transparent;
+}
+
+
+.select-selected:after {
+  position: absolute;
+  content: "";
+  background-image: url(../../image/arrow-down.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 21px;
+  right: 16px;
+  display: block;
+  width: 13px;
+  height: 8px;
+}
+
+.select-selected.select-arrow-active:after {
+  display: none;
+}
+
+.select-selected { 
+  color: #000;
+  padding: 13px 43px 13px 16px;
+  border: 1px solid #BDBDBD;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  
+}
+.select-selected:hover {
+  cursor: pointer;
+}
+.select-selected::selection {
+  border-color: green;
+}
+
+
+.select-arrow-active {
+  border-bottom: 1px solid transparent;
+  border-bottom-left-radius: 0!important;
+  border-bottom-right-radius: 0!important;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 12px;
+  background-color: #fff;  
+}
+.select-items div {
+  cursor: pointer;
+  user-select: none;
+  padding: 10px 0;
+  line-height: 12px;
+  
+}
+.select-items div:first-child {
+  padding-top: 7px;
+}
+.select-items {
+  position: absolute;
+  background-color: #fff;
+  top: 100%;
+  left: 0;
+  right: 0;
+  top: 40px;
+  z-index: 99;
+  border: solid 1px #BDBDBD;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top: none;
+  padding: 0px 13px 0 16px;
+}
+
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  color: #DF4E3C;
+}
+
+/*# sourceMappingURL=listing.css.map */

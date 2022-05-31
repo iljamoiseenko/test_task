@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/style/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla&family=Quicksand:wght@300;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header" style="background-image: url(src/image/header-img.png);">
+        <div class="header__wrapper">
+            <div class="header__header--block">
+                <div class="header__logo">
+                    <img src="src/image/header-logo.png" alt="logo">
+                </div>
+                <nav class="header__navigation">
+                    <ul>
+                        <li><a href="#">Inventory</a></li>
+                        <li><a href="#">Financing</a></li>
+                        <li><a href="#">Contacts</a></li>
+                    </ul>
+                    <i class="header__navigation--icon">
+                        <img src="./src/image/facebook-icon.svg" alt="icon">
+                    </i>
+                    <i class="header__navigation--icon">
+                        <img src="./src/image/instagram-icon.svg" alt="icon">
+                    </i>
+                </nav>
+            </div>
+            <div class="header__banner">
+                <h1 class="header__banner--title">
+                    The right way to get a car
+                </h1>
+                <div class="header__banner-info-block">
+                    <div class="header__banner--text">
+                        <p>Monza Motorsports is a boutique-style dealership specializing in premium imports. We offer an advanced online vehicle purchasing experience with integrated financing and contactless home delivery.</p>
+                    </div>
+                    <div class="header__banner--text">
+                        <p>All of our cars come with a 5 day/500 kilometres no-hassle exchange option. Since 2012 Monza Motorsports has been the benchmark for innovation in the automotive industry.</p>
+                    </div>
+                </div>
+                <button class="header__banner-btn">
+                    Browse cars
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="listing">
+        <h2 class="listing__title">
+            CURRENT OFFERS
+        </h2>
+        
+        <div class="listing__filters">
+
+            <div class="custom-select" style="width:170px;">
+                <select  onchange=" this.dataset.chosen = this.value; ">
+                  <option value="opt0">Year</option>
+                  <option class="test-select" value="opt1">Audi</option>
+                  <option value="opt2">BMW</option>
+                  <option value="opt3">Citroen</option>
+                </select>
+            </div>
+
+            <div class="custom-select" style="width:170px;">
+                <select>
+                  <option value="0">Make</option>
+                  <option value="1">Audi</option>
+                  <option value="2">BMW</option>
+                  <option value="3">Citroen</option>
+                </select>
+            </div>
+
+            <div class="custom-select" style="width:170px;">
+                <select>
+                  <option value="0">Model</option>
+                  <option value="1">Audi</option>
+                  <option value="2">BMW</option>
+                  <option value="3">Citroen</option>
+                </select>
+            </div>
+
+            <div class="custom-select" style="width:170px;">
+                <select>
+                  <option value="0">Trim</option>
+                  <option value="1">Audi</option>
+                  <option value="2">BMW</option>
+                  <option value="3">Citroen</option>
+                </select>
+            </div>
+
+            <div class="custom-select" style="width:170px;">
+                <select>
+                  <option value="0">Mileage </option>
+                  <option value="1">Audi</option>
+                  <option value="2">BMW</option>
+                  <option value="3">Citroen</option>
+                </select>
+            </div>
+
+            <button class="listing__btn">40 cars</button>
+        </div>
+
+        <div class="listing__sort">
+            <div class="listing__checkbox">
+                <input type="checkbox" name="check">
+                <p>Instantly available vehicles</p>
+            </div>
+            <div class="listing__sort--block">
+                <p>Sort by </p>
+                <div class="listing__sort--arrows">
+                    <img class="arrow-up" src="src/image/arrow-up.svg" alt="arrow">
+                    <img class="arrow-down" src="src/image/sort-arrow-down.svg" alt="arrow">
+                </div>
+                <div class="sort-dropdown">Publication date (ascending)</div>
+                <div class="sort-dropdown-items">
+                    <p class="drop-el">Publication date (descending)</p>
+                    <p>Price (ascending)</p>
+                    <p>Price (descending)</p>
+                    <p>Mileage (ascending)</p>
+                    <p>Mileage (descending)</p>
+                    <p>Performance (ascending)</p>
+                    <p>Performance (descending)</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="listing__cart-block col-sm-6 col-lg-3 col-12">
+                <div class="listing__cart-block-item">
+                    <div class="listing__cart-block--img">
+                        <img src="./src/image/cars-img1.png" alt="car">
+                        <div class="badge ">
+                            New
+                        </div>
+                    </div>
+                    
+                    <div class="listing__cart-block-item-info">
+                        <div class="car-name-block">
+                            <span class="car-year">2019</span>
+                            <span class="car-name">Volkswagen Tiguan</span>
+                        </div>
+                        <div class="car-info-block">
+                            <span class="car-mileage">19,855 km</span>
+                            <span class="car-transmission">Automatic</span>
+                            <span class="car-fuel-type">Diesel</span>
+                        </div>
+                        <p class="car-price">$34,888</p>
+                    </div>
+                </div>
+            </div>
+            <div class="listing__cart-block col-sm-6 col-lg-3 col-12">
+                <div class="listing__cart-block-item sold">
+                    <div class="listing__cart-block--img">
+                        <img src="./src/image/cars-img2.png" alt="car">
+                        <div class="badge">
+                            New
+                        </div>
+                    </div>
+                    <div class="listing__sold">
+                        <h3>Sold</h3>
+                    </div>
+                    
+                    <div class="listing__cart-block-item-info">
+                        <div class="car-name-block">
+                            <span class="car-year">2019</span>
+                            <span class="car-name">Volkswagen Tiguan</span>
+                        </div>
+                        <div class="car-info-block">
+                            <span class="car-mileage">19,855 km</span>
+                            <span class="car-transmission">Automatic</span>
+                            <span class="car-fuel-type">Diesel</span>
+                        </div>
+                        <p class="car-price">$34,888</p>
+                    </div>
+                </div>
+            </div>
+            <div class="listing__cart-block col-sm-6 col-lg-3 col-12">
+                <div class="listing__cart-block-item sold">
+                    <div class="listing__cart-block--img">
+                        <img src="./src/image/cars-img4.png" alt="car">
+                        <div class="badge ">
+                            New
+                        </div>
+                    </div>
+                    <div class="listing__sold">
+                        <h3>Sold</h3>
+                    </div>
+                    
+                    <div class="listing__cart-block-item-info">
+                        <div class="car-name-block">
+                            <span class="car-year">2019</span>
+                            <span class="car-name">Volkswagen Tiguan</span>
+                        </div>
+                        <div class="car-info-block">
+                            <span class="car-mileage">19,855 km</span>
+                            <span class="car-transmission">Automatic</span>
+                            <span class="car-fuel-type">Diesel</span>
+                        </div>
+                        <p class="car-price">$34,888</p>
+                    </div>
+                </div>
+            </div>
+            <div class="listing__cart-block col-sm-6 col-lg-3 col-12">
+                <div class="listing__cart-block-item">
+                    <div class="listing__cart-block--img">
+                        <img src="./src/image/cars-img3.png" alt="car">
+                        <div class="badge ">
+                            New
+                        </div>
+                    </div>
+                    
+                    <div class="listing__cart-block-item-info">
+                        <div class="car-name-block">
+                            <span class="car-year">2019</span>
+                            <span class="car-name">Volkswagen Tiguan</span>
+                        </div>
+                        <div class="car-info-block">
+                            <span class="car-mileage">19,855 km</span>
+                            <span class="car-transmission">Automatic</span>
+                            <span class="car-fuel-type">Diesel</span>
+                        </div>
+                        <p class="car-price">$34,888</p>
+                    </div>
+                </div>
+            </div>
+            <div class="listing__cart-block col-sm-6 col-lg-3 col-12">
+                <div class="listing__cart-block-item">
+                    <div class="listing__cart-block--img">
+                        <img src="./src/image/cars-img1.png" alt="car">
+                        <div class="badge ">
+                            New
+                        </div>
+                    </div>
+                    
+                    <div class="listing__cart-block-item-info">
+                        <div class="car-name-block">
+                            <span class="car-year">2019</span>
+                            <span class="car-name">Volkswagen Tiguan</span>
+                        </div>
+                        <div class="car-info-block">
+                            <span class="car-mileage">19,855 km</span>
+                            <span class="car-transmission">Automatic</span>
+                            <span class="car-fuel-type">Diesel</span>
+                        </div>
+                        <p class="car-price">$34,888</p>
+                    </div>
+                </div>
+            </div>
+            <div class="listing__cart-block col-sm-6 col-lg-3 col-12">
+                <div class="listing__cart-block-item">
+                    <div class="listing__cart-block--img">
+                        <img src="./src/image/cars-img1.png" alt="car">
+                        <div class="badge badge-active">
+                            New
+                        </div>
+                    </div>
+                    <div class="listing__sold">
+                        <h3>Sold</h3>
+                    </div>
+                    
+                    <div class="listing__cart-block-item-info">
+                        <div class="car-name-block">
+                            <span class="car-year">2019</span>
+                            <span class="car-name">Volkswagen Tiguan</span>
+                        </div>
+                        <div class="car-info-block">
+                            <span class="car-mileage">19,855 km</span>
+                            <span class="car-transmission">Automatic</span>
+                            <span class="car-fuel-type">Diesel</span>
+                        </div>
+                        <p class="car-price">$34,888</p>
+                    </div>
+                </div>
+            </div>
+            <div class="listing__cart-block col-sm-6 col-lg-3 col-12">
+                <div class="listing__cart-block-item">
+                    <div class="listing__cart-block--img">
+                        <img src="./src/image/cars-img1.png" alt="car">
+                        <div class="badge badge-active">
+                            New
+                        </div>
+                    </div>
+                    <div class="listing__sold">
+                        <h3>Sold</h3>
+                    </div>
+                    
+                    <div class="listing__cart-block-item-info">
+                        <div class="car-name-block">
+                            <span class="car-year">2019</span>
+                            <span class="car-name">Volkswagen Tiguan</span>
+                        </div>
+                        <div class="car-info-block">
+                            <span class="car-mileage">19,855 km</span>
+                            <span class="car-transmission">Automatic</span>
+                            <span class="car-fuel-type">Diesel</span>
+                        </div>
+                        <p class="car-price">$34,888</p>
+                    </div>
+                </div>
+            </div>
+            <div class="listing__cart-block col-sm-6 col-lg-3 col-12">
+                <div class="listing__cart-block-item">
+                    <div class="listing__cart-block--img">
+                        <img src="./src/image/cars-img1.png" alt="car">
+                        <div class="badge badge-active">
+                            New
+                        </div>
+                    </div>
+                    <div class="listing__sold">
+                        <h3>Sold</h3>
+                    </div>
+                    
+                    <div class="listing__cart-block-item-info">
+                        <div class="car-name-block">
+                            <span class="car-year">2019</span>
+                            <span class="car-name">Volkswagen Tiguan</span>
+                        </div>
+                        <div class="car-info-block">
+                            <span class="car-mileage">19,855 km</span>
+                            <span class="car-transmission">Automatic</span>
+                            <span class="car-fuel-type">Diesel</span>
+                        </div>
+                        <p class="car-price">$34,888</p>
+                    </div>
+                </div>
+            </div>
+            <div class="listing__cart-block col-sm-6 col-lg-3 col-12">
+                <div class="listing__cart-block-item sold">
+                    <div class="listing__cart-block--img">
+                        <img src="./src/image/cars-img1.png" alt="car">
+                        <div class="badge">
+                            New
+                        </div>
+                    </div>
+                    <div class="listing__sold">
+                        <h3>Sold</h3>
+                    </div>
+                    
+                    <div class="listing__cart-block-item-info">
+                        <div class="car-name-block">
+                            <span class="car-year">2019</span>
+                            <span class="car-name">Volkswagen Tiguan</span>
+                        </div>
+                        <div class="car-info-block">
+                            <span class="car-mileage">19,855 km</span>
+                            <span class="car-transmission">Automatic</span>
+                            <span class="car-fuel-type">Diesel</span>
+                        </div>
+                        <p class="car-price">$34,888</p>
+                    </div>
+                </div>
+            </div>
+            <div class="listing__cart-block col-sm-6 col-lg-3 col-12">
+                <div class="listing__cart-block-item">
+                    <div class="listing__cart-block--img">
+                        <img src="./src/image/cars-img4.png" alt="car">
+                        <div class="badge">
+                            New
+                        </div>
+                    </div>
+                    <div class="listing__sold">
+                        <h3>Sold</h3>
+                    </div>
+                    
+                    <div class="listing__cart-block-item-info">
+                        <div class="car-name-block">
+                            <span class="car-year">2019</span>
+                            <span class="car-name">Volkswagen Tiguan</span>
+                        </div>
+                        <div class="car-info-block">
+                            <span class="car-mileage">19,855 km</span>
+                            <span class="car-transmission">Automatic</span>
+                            <span class="car-fuel-type">Diesel</span>
+                        </div>
+                        <p class="car-price">$34,888</p>
+                    </div>
+                </div>
+            </div>
+            <div class="listing__cart-block col-sm-6 col-lg-3 col-12">
+                <div class="listing__cart-block-item">
+                    <div class="listing__cart-block--img">
+                        <img src="./src/image/cars-img1.png" alt="car">
+                        <div class="badge">
+                            New
+                        </div>
+                    </div>
+                    <div class="listing__sold">
+                        <h3>Sold</h3>
+                    </div>
+                    
+                    <div class="listing__cart-block-item-info">
+                        <div class="car-name-block">
+                            <span class="car-year">2019</span>
+                            <span class="car-name">Volkswagen Tiguan</span>
+                        </div>
+                        <div class="car-info-block">
+                            <span class="car-mileage">19,855 km</span>
+                            <span class="car-transmission">Automatic</span>
+                            <span class="car-fuel-type">Diesel</span>
+                        </div>
+                        <p class="car-price">$34,888</p>
+                    </div>
+                </div>
+            </div>
+            <div class="listing__cart-block col-sm-6 col-lg-3 col-12">
+                <div class="listing__cart-block-item">
+                    <div class="listing__cart-block--img">
+                        <img src="./src/image/cars-img2.png" alt="car">
+                        <div class="badge">
+                            New
+                        </div>
+                    </div>
+                    <div class="listing__sold">
+                        <h3>Sold</h3>
+                    </div>
+                    
+                    <div class="listing__cart-block-item-info">
+                        <div class="car-name-block">
+                            <span class="car-year">2019</span>
+                            <span class="car-name">Volkswagen Tiguan</span>
+                        </div>
+                        <div class="car-info-block">
+                            <span class="car-mileage">19,855 km</span>
+                            <span class="car-transmission">Automatic</span>
+                            <span class="car-fuel-type">Diesel</span>
+                        </div>
+                        <p class="car-price">$34,888</p>
+                    </div>
+                </div>
+            </div>
+            <div class="listing__cart-block col-sm-6 col-lg-3 col-12">
+                <div class="listing__cart-block-item">
+                    <div class="listing__cart-block--img">
+                        <img src="./src/image/cars-img4.png" alt="car">
+                        <div class="badge ">
+                            New
+                        </div>
+                    </div>
+                    <div class="listing__sold">
+                        <h3>Sold</h3>
+                    </div>
+                    
+                    <div class="listing__cart-block-item-info">
+                        <div class="car-name-block">
+                            <span class="car-year">2019</span>
+                            <span class="car-name">Volkswagen Tiguan</span>
+                        </div>
+                        <div class="car-info-block">
+                            <span class="car-mileage">19,855 km</span>
+                            <span class="car-transmission">Automatic</span>
+                            <span class="car-fuel-type">Diesel</span>
+                        </div>
+                        <p class="car-price">$34,888</p>
+                    </div>
+                </div>
+            </div>
+            <div class="listing__cart-block col-sm-6 col-lg-3 col-12">
+                <div class="listing__cart-block-item">
+                    <div class="listing__cart-block--img">
+                        <img src="./src/image/cars-img3.png" alt="car">
+                        <div class="badge ">
+                            New
+                        </div>
+                    </div>
+                    <div class="listing__sold">
+                        <h3>Sold</h3>
+                    </div>
+                    
+                    <div class="listing__cart-block-item-info">
+                        <div class="car-name-block">
+                            <span class="car-year">2019</span>
+                            <span class="car-name">Volkswagen Tiguan</span>
+                        </div>
+                        <div class="car-info-block">
+                            <span class="car-mileage">19,855 km</span>
+                            <span class="car-transmission">Automatic</span>
+                            <span class="car-fuel-type">Diesel</span>
+                        </div>
+                        <p class="car-price">$34,888</p>
+                    </div>
+                </div>
+            </div>
+            <div class="listing__cart-block col-sm-6 col-lg-3 col-12">
+                <div class="listing__cart-block-item">
+                    <div class="listing__cart-block--img">
+                        <img src="./src/image/cars-img1.png" alt="car">
+                        <div class="badge ">
+                            New
+                        </div>
+                    </div>
+                    <div class="listing__sold">
+                        <h3>Sold</h3>
+                    </div>
+                    
+                    <div class="listing__cart-block-item-info">
+                        <div class="car-name-block">
+                            <span class="car-year">2019</span>
+                            <span class="car-name">Volkswagen Tiguan</span>
+                        </div>
+                        <div class="car-info-block">
+                            <span class="car-mileage">19,855 km</span>
+                            <span class="car-transmission">Automatic</span>
+                            <span class="car-fuel-type">Diesel</span>
+                        </div>
+                        <p class="car-price">$34,888</p>
+                    </div>
+                </div>
+            </div>
+            <div class="listing__cart-block col-sm-6 col-lg-3 col-12">
+                <div class="listing__cart-block-item sold">
+                    <div class="listing__cart-block--img">
+                        <img src="./src/image/cars-img4.png" alt="car">
+                        <div class="badge ">
+                            New
+                        </div>
+                    </div>
+                    <div class="listing__sold">
+                        <h3>Sold</h3>
+                    </div>
+                    
+                    <div class="listing__cart-block-item-info">
+                        <div class="car-name-block">
+                            <span class="car-year">2019</span>
+                            <span class="car-name">Volkswagen Tiguan</span>
+                        </div>
+                        <div class="car-info-block">
+                            <span class="car-mileage">19,855 km</span>
+                            <span class="car-transmission">Automatic</span>
+                            <span class="car-fuel-type">Diesel</span>
+                        </div>
+                        <p class="car-price">$34,888</p>
+                    </div>
+                </div>
+            </div>
+            <div class="listing__cart-block col-sm-6 col-lg-3 col-12">
+                <div class="listing__cart-block-item">
+                    <div class="listing__cart-block--img">
+                        <img src="./src/image/cars-img1.png" alt="car">
+                        <div class="badge badge-active">
+                            New
+                        </div>
+                    </div>
+                    <div class="listing__sold">
+                        <h3>Sold</h3>
+                    </div>
+                    
+                    <div class="listing__cart-block-item-info">
+                        <div class="car-name-block">
+                            <span class="car-year">2019</span>
+                            <span class="car-name">Volkswagen Tiguan</span>
+                        </div>
+                        <div class="car-info-block">
+                            <span class="car-mileage">19,855 km</span>
+                            <span class="car-transmission">Automatic</span>
+                            <span class="car-fuel-type">Diesel</span>
+                        </div>
+                        <p class="car-price">$34,888</p>
+                    </div>
+                </div>
+            </div>
+            <div class="listing__cart-block col-sm-6 col-lg-3 col-12">
+                <div class="listing__cart-block-item">
+                    <div class="listing__cart-block--img">
+                        <img src="./src/image/cars-img1.png" alt="car">
+                        <div class="badge">
+                            New
+                        </div>
+                    </div>
+                    <div class="listing__sold">
+                        <h3>Sold</h3>
+                    </div>
+                    
+                    <div class="listing__cart-block-item-info">
+                        <div class="car-name-block">
+                            <span class="car-year">2019</span>
+                            <span class="car-name">Volkswagen Tiguan</span>
+                        </div>
+                        <div class="car-info-block">
+                            <span class="car-mileage">19,855 km</span>
+                            <span class="car-transmission">Automatic</span>
+                            <span class="car-fuel-type">Diesel</span>
+                        </div>
+                        <p class="car-price">$34,888</p>
+                    </div>
+                </div>
+            </div>
+            <div class="listing__cart-block col-sm-6 col-lg-3 col-12">
+                <div class="listing__cart-block-item">
+                    <div class="listing__cart-block--img">
+                        <img src="./src/image/cars-img2.png" alt="car">
+                        <div class="badge ">
+                            New
+                        </div>
+                    </div>
+                    <div class="listing__sold">
+                        <h3>Sold</h3>
+                    </div>
+                    
+                    <div class="listing__cart-block-item-info">
+                        <div class="car-name-block">
+                            <span class="car-year">2019</span>
+                            <span class="car-name">Volkswagen Tiguan</span>
+                        </div>
+                        <div class="car-info-block">
+                            <span class="car-mileage">19,855 km</span>
+                            <span class="car-transmission">Automatic</span>
+                            <span class="car-fuel-type">Diesel</span>
+                        </div>
+                        <p class="car-price">$34,888</p>
+                    </div>
+                </div>
+            </div>
+            <div class="listing__cart-block col-sm-6 col-lg-3 col-12">
+                <div class="listing__cart-block-item">
+                    <div class="listing__cart-block--img">
+                        <img src="./src/image/cars-img1.png" alt="car">
+                        <div class="badge">
+                            New
+                        </div>
+                    </div>
+                    <div class="listing__sold">
+                        <h3>Sold</h3>
+                    </div>
+                    
+                    <div class="listing__cart-block-item-info">
+                        <div class="car-name-block">
+                            <span class="car-year">2019</span>
+                            <span class="car-name">Volkswagen Tiguan</span>
+                        </div>
+                        <div class="car-info-block">
+                            <span class="car-mileage">19,855 km</span>
+                            <span class="car-transmission">Automatic</span>
+                            <span class="car-fuel-type">Diesel</span>
+                        </div>
+                        <p class="car-price">$34,888</p>
+                    </div>
+                </div>
+            </div>
+            <div class="listing__cart-block col-sm-6 col-lg-3 col-12">
+                <div class="listing__cart-block-item">
+                    <div class="listing__cart-block--img">
+                        <img src="./src/image/cars-img1.png" alt="car">
+                        <div class="badge">
+                            New
+                        </div>
+                    </div>
+                    <div class="listing__sold">
+                        <h3>Sold</h3>
+                    </div>
+                    
+                    <div class="listing__cart-block-item-info">
+                        <div class="car-name-block">
+                            <span class="car-year">2019</span>
+                            <span class="car-name">Volkswagen Tiguan</span>
+                        </div>
+                        <div class="car-info-block">
+                            <span class="car-mileage">19,855 km</span>
+                            <span class="car-transmission">Automatic</span>
+                            <span class="car-fuel-type">Diesel</span>
+                        </div>
+                        <p class="car-price">$34,888</p>
+                    </div>
+                </div>
+            </div>
+            <div class="listing__cart-block col-sm-6 col-lg-3 col-12">
+                <div class="listing__cart-block-item">
+                    <div class="listing__cart-block--img">
+                        <img src="./src/image/cars-img1.png" alt="car">
+                        <div class="badge">
+                            New
+                        </div>
+                    </div>
+                    <div class="listing__sold">
+                        <h3>Sold</h3>
+                    </div>
+                    
+                    <div class="listing__cart-block-item-info">
+                        <div class="car-name-block">
+                            <span class="car-year">2019</span>
+                            <span class="car-name">Volkswagen Tiguan</span>
+                        </div>
+                        <div class="car-info-block">
+                            <span class="car-mileage">19,855 km</span>
+                            <span class="car-transmission">Automatic</span>
+                            <span class="car-fuel-type">Diesel</span>
+                        </div>
+                        <p class="car-price">$34,888</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+
+    </section>
+
+    <section class="newsletter">
+        <div class="newsletter__wrapper">
+            <div class="newsletter__text col-5 ">
+                <h4 class="newsletter__text--title">Haven't found a suitable vehicle?</h4>
+                <p class="newsletter__text--description">Sign up for our newsletter and be the first to know when we publish new vehicle offers.
+                </p>
+            </div>
+            <div class="newsletter__form col-7 ">
+                <input type="email" placeholder="Enter your email">
+                <button>Subscribe now</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="questions">
+        <h3 class="questions__title">
+            popular questions
+        </h3>
+        
+        <div class="accordion-wrapper">
+            <div class="accordion-items">
+                <button class='acc-btn'><span>1. Scope</span>
+                    <i class="plus"><img src="./src/image/plus.svg" alt="plus"></i>
+                    <i class="minus"><img src="./src/image/minus.svg" alt="minus"></i>
+                </button>
+                <div class="acc-content">
+                    <p>1.1 The statutory warranty is completely excluded to the extent permitted by law.</p>
+                    <p>1.2 If the vehicle still has a current factory warranty, a sales representative (brand representative) of the manufacturer shall provide the services owed therein. If there is a factory warranty, the beginning of the warranty for new vehicles or vehicles with a current manufacturer's warranty is not the date of the first placing on the market, but the beginning of the warranty in the manufacturer's system or the contractually agreed beginning of the warranty, if any.
+                    </p>
+                    <p>1.3 If there is a special warranty insurance for the vehicle, this will take the place of the material warranty according to section 3.1 and replace it. In this case, the General Terms and Conditions of the respective warranty service provider apply.</p>
+                </div>
+            </div>
+            <div class="accordion-items">
+                <button class='acc-btn'><span>2. Vehicle characteristics</span>
+                    <i class="plus"><img src="./src/image/plus.svg" alt="plus"></i>
+                    <i class="minus"><img src="./src/image/minus.svg" alt="minus"></i>
+                </button>
+                <div class="acc-content">
+                    <p>2.1 The statutory warranty is completely excluded to the extent permitted by law.</p>
+                    <p>2.2 If the vehicle still has a current factory warranty, a sales representative (brand representative) of the manufacturer shall provide the services owed therein. If there is a factory warranty, the beginning of the warranty for new vehicles or vehicles with a current manufacturer's warranty is not the date of the first placing on the market, but the beginning of the warranty in the manufacturer's system or the contractually agreed beginning of the warranty, if any.
+                    </p>
+                    <p>2.3 If there is a special warranty insurance for the vehicle, this will take the place of the material warranty according to section 3.1 and replace it. In this case, the General Terms and Conditions of the respective warranty service provider apply.</p>
+                </div>
+            </div>
+            <div class="accordion-items">
+                <button class='acc-btn'><span>3. Warranty / guarantee</span>
+                    <i class="plus"><img src="./src/image/plus.svg" alt="plus"></i>
+                    <i class="minus"><img src="./src/image/minus.svg" alt="minus"></i>
+                </button>
+                <div class="acc-content">
+                    <p>3.1 The statutory warranty is completely excluded to the extent permitted by law.</p>
+                    <p>3.2 If the vehicle still has a current factory warranty, a sales representative (brand representative) of the manufacturer shall provide the services owed therein. If there is a factory warranty, the beginning of the warranty for new vehicles or vehicles with a current manufacturer's warranty is not the date of the first placing on the market, but the beginning of the warranty in the manufacturer's system or the contractually agreed beginning of the warranty, if any.
+                    </p>
+                    <p>3.3 If there is a special warranty insurance for the vehicle, this will take the place of the material warranty according to section 3.1 and replace it. In this case, the General Terms and Conditions of the respective warranty service provider apply.</p>
+                </div>
+            </div>
+            <div class="accordion-items">
+                <button class='acc-btn'><span>4. Trade-in vehicle</span>
+                    <i class="plus"><img src="./src/image/plus.svg" alt="plus"></i>
+                    <i class="minus"><img src="./src/image/minus.svg" alt="minus"></i>
+                </button>
+                <div class="acc-content">
+                    <p>3.1 The statutory warranty is completely excluded to the extent permitted by law.</p>
+                    <p>3.2 If the vehicle still has a current factory warranty, a sales representative (brand representative) of the manufacturer shall provide the services owed therein. If there is a factory warranty, the beginning of the warranty for new vehicles or vehicles with a current manufacturer's warranty is not the date of the first placing on the market, but the beginning of the warranty in the manufacturer's system or the contractually agreed beginning of the warranty, if any.
+                    </p>
+                    <p>3.3 If there is a special warranty insurance for the vehicle, this will take the place of the material warranty according to section 3.1 and replace it. In this case, the General Terms and Conditions of the respective warranty service provider apply.</p>
+                </div>
+            </div>
+            <div class="accordion-items">
+                <button class='acc-btn'><span>5. Home Delivery</span>
+                    <i class="plus"><img src="./src/image/plus.svg" alt="plus"></i>
+                    <i class="minus"><img src="./src/image/minus.svg" alt="minus"></i>
+                </button>
+                <div class="acc-content">
+                    <p>5.1 The statutory warranty is completely excluded to the extent permitted by law.</p>
+                    <p>5.2 If the vehicle still has a current factory warranty, a sales representative (brand representative) of the manufacturer shall provide the services owed therein. If there is a factory warranty, the beginning of the warranty for new vehicles or vehicles with a current manufacturer's warranty is not the date of the first placing on the market, but the beginning of the warranty in the manufacturer's system or the contractually agreed beginning of the warranty, if any.
+                    </p>
+                    <p>5.3 If there is a special warranty insurance for the vehicle, this will take the place of the material warranty according to section 3.1 and replace it. In this case, the General Terms and Conditions of the respective warranty service provider apply.</p>
+                </div>
+            </div>
+            <div class="accordion-items">
+                <button class='acc-btn'><span>6. Right of return</span>
+                    <i class="plus"><img src="./src/image/plus.svg" alt="plus"></i>
+                    <i class="minus"><img src="./src/image/minus.svg" alt="minus"></i>
+                </button>
+                <div class="acc-content">
+                    <p>6.1 The statutory warranty is completely excluded to the extent permitted by law.</p>
+                    <p>6.2 If the vehicle still has a current factory warranty, a sales representative (brand representative) of the manufacturer shall provide the services owed therein. If there is a factory warranty, the beginning of the warranty for new vehicles or vehicles with a current manufacturer's warranty is not the date of the first placing on the market, but the beginning of the warranty in the manufacturer's system or the contractually agreed beginning of the warranty, if any.
+                    </p>
+                    <p>6.3 If there is a special warranty insurance for the vehicle, this will take the place of the material warranty according to section 3.1 and replace it. In this case, the General Terms and Conditions of the respective warranty service provider apply.</p>
+                </div>
+            </div>
+            <div class="accordion-items">
+                <button class='acc-btn'><span>7. Written form</span>
+                    <i class="plus"><img src="./src/image/plus.svg" alt="plus"></i>
+                    <i class="minus"><img src="./src/image/minus.svg" alt="minus"></i>
+                </button>
+                <div class="acc-content">
+                    <p>7.1 The statutory warranty is completely excluded to the extent permitted by law.</p>
+                    <p>7.2 If the vehicle still has a current factory warranty, a sales representative (brand representative) of the manufacturer shall provide the services owed therein. If there is a factory warranty, the beginning of the warranty for new vehicles or vehicles with a current manufacturer's warranty is not the date of the first placing on the market, but the beginning of the warranty in the manufacturer's system or the contractually agreed beginning of the warranty, if any.
+                    </p>
+                    <p>7.3 If there is a special warranty insurance for the vehicle, this will take the place of the material warranty according to section 3.1 and replace it. In this case, the General Terms and Conditions of the respective warranty service provider apply.</p>
+                </div>
+            </div>
+            <div class="accordion-items">
+                <button class='acc-btn'><span>8. Applicable law and place of jurisdiction</span>
+                    <i class="plus"><img src="./src/image/plus.svg" alt="plus"></i>
+                    <i class="minus"><img src="./src/image/minus.svg" alt="minus"></i>
+                </button>
+                <div class="acc-content">
+                    <p>8.1 The statutory warranty is completely excluded to the extent permitted by law.</p>
+                    <p>8.2 If the vehicle still has a current factory warranty, a sales representative (brand representative) of the manufacturer shall provide the services owed therein. If there is a factory warranty, the beginning of the warranty for new vehicles or vehicles with a current manufacturer's warranty is not the date of the first placing on the market, but the beginning of the warranty in the manufacturer's system or the contractually agreed beginning of the warranty, if any.
+                    </p>
+                    <p>8.3 If there is a special warranty insurance for the vehicle, this will take the place of the material warranty according to section 3.1 and replace it. In this case, the General Terms and Conditions of the respective warranty service provider apply.</p>
+                </div>
+            </div>
+            <div class="accordion-items"></div>
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <div class="footer__logo">
+                <a class="footer__logo--link" href="#">
+                    <img src="src/image/footer-logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="footer__nav">
+                <nav>
+                    <ul>
+                        <li><a href="#">Inventory</a></li>
+                        <li><a href="#">Financing</a></li>
+                        <li><a href="#">Contacts</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__nav-icons">
+                <i class="footer__navigation--icon">
+                    <img src="./src/image/facebook-icon.svg" alt="icon">
+                </i>
+                <i class="footer__navigation--icon">
+                    <img src="./src/image/instagram-icon.svg" alt="icon">
+                </i>
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,131 @@
+@import '../variables.scss';
+
+.header {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__wrapper {
+        max-width: 1240px;
+        margin: 0 auto;
+    }
+    &__header--block {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__logo {
+        padding: 19px 0;
+    }
+    &__navigation {
+        display: flex;
+        align-items: center;
+        padding: 25px 0px 27px 0;
+        ul {
+            display: flex;
+            padding: 0;
+            margin: 0;
+            li {
+                list-style: none;
+                font-size: 15px;
+                line-height: 20px;
+                padding: 0;
+                margin-right: 40px;
+                font-family: 'Noto Sans';
+                font-weight: 500;
+                a {
+                    text-decoration: none;
+                    color: $color-primary-200;
+                }
+            }
+        }
+    }
+    &__navigation--icon {
+        margin-right: 31px;
+        &:last-child {
+            margin: 0;
+        }
+    }
+    &__banner--title {
+        color: $color-primary-200;
+        font-size: 50px;
+        line-height: 68px;
+        margin-top: 118px;
+        font-family: 'Noto Sans';
+font-style: normal;
+font-weight: 700;
+    }
+    &__banner-info-block {
+        display: flex;
+
+    }
+    &__banner--text {
+        font-size: 15px;
+        line-height: 20px;
+        font-weight: 400;
+        color: $color-primary-200;
+        max-width: 295px;
+        margin-right: 20px;
+    }
+    &__banner-btn {
+        margin: 72px 0px 150px 0px;
+        padding: 13px 90px 16px 91px;
+        border: 2px solid $color-primary-200;
+        border-radius: 15px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 27px;
+        color: $color-primary-200;
+        background: transparent;
+        &:hover {
+            background: $color-primary-200;
+            border-color: $color-primary-200;
+            color: #000;
+            transition: .5s;
+            cursor: pointer;
+        }
+    }
+    @media (max-width: 1280px) {
+        &__wrapper {
+            padding: 0 20px;
+        } 
+    }
+    @media (max-width: 596px) {
+        &__navigation {
+            ul {
+                // flex-direction: column;
+                li {
+                    margin-right: 20px;
+                }
+            }
+        }
+        &__banner--text {
+            font-size: 12px;
+        }
+        &__banner--title {
+            font-size: 30px;
+            margin-top: 40px;
+        }
+        &__banner-btn {
+            margin: 52px 0px 120px 0px;
+            padding: 10px 80px 10px 80px;
+            border: 2px solid #f8f8f8;
+            border-radius: 15px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 27px;
+            color: #f8f8f8;
+            background: transparent;
+        }
+    }
+    @media (max-width: 510px) {
+        &__header--block {
+            flex-direction: column;
+        }
+        &__navigation {
+            padding: 0;
+        }
+        &__banner-btn {
+            margin: 40px 0px 100px 0px;
+            width: 100%;
+        }
+    }
+}

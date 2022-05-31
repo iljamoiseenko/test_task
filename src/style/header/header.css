@@ -1,0 +1,126 @@
+.header {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.header__wrapper {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+.header__header--block {
+  display: flex;
+  justify-content: space-between;
+}
+.header__logo {
+  padding: 19px 0;
+}
+.header__navigation {
+  display: flex;
+  align-items: center;
+  padding: 25px 0px 27px 0;
+}
+.header__navigation ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+.header__navigation ul li {
+  list-style: none;
+  font-size: 15px;
+  line-height: 20px;
+  padding: 0;
+  margin-right: 40px;
+  font-family: "Noto Sans";
+  font-weight: 500;
+}
+.header__navigation ul li a {
+  text-decoration: none;
+  color: #f8f8f8;
+}
+.header__navigation--icon {
+  margin-right: 31px;
+}
+.header__navigation--icon:hover {
+  cursor: pointer;
+}
+.header__navigation--icon:last-child {
+  margin: 0;
+}
+.header__banner--title {
+  color: #f8f8f8;
+  font-size: 50px;
+  line-height: 68px;
+  margin-top: 118px;
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 700;
+}
+.header__banner-info-block {
+  display: flex;
+}
+.header__banner--text {
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #f8f8f8;
+  max-width: 295px;
+  margin-right: 20px;
+}
+.header__banner-btn {
+  margin: 72px 0px 150px 0px;
+  padding: 13px 90px 16px 91px;
+  border: 2px solid #f8f8f8;
+  border-radius: 15px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 27px;
+  color: #f8f8f8;
+  background: transparent;
+}
+.header__banner-btn:hover {
+  background: #f8f8f8;
+  border-color: #f8f8f8;
+  color: #000;
+  transition: 0.5s;
+  cursor: pointer;
+}
+@media (max-width: 1280px) {
+  .header__wrapper {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 596px) {
+  .header__navigation ul li {
+    margin-right: 20px;
+  }
+  .header__banner--text {
+    font-size: 12px;
+  }
+  .header__banner--title {
+    font-size: 30px;
+    margin-top: 40px;
+  }
+  .header__banner-btn {
+    margin: 52px 0px 120px 0px;
+    padding: 10px 80px 10px 80px;
+    border: 2px solid #f8f8f8;
+    border-radius: 15px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 27px;
+    color: #f8f8f8;
+    background: transparent;
+  }
+}
+@media (max-width: 510px) {
+  .header__header--block {
+    flex-direction: column;
+  }
+  .header__navigation {
+    padding: 0;
+  }
+  .header__banner-btn {
+    margin: 40px 0px 100px 0px;
+    width: 100%;
+  }
+}/*# sourceMappingURL=header.css.map */

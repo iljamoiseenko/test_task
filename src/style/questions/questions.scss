@@ -1,0 +1,105 @@
+@import '../variables.scss'; 
+
+.questions {
+    max-width: 820px;
+    margin: 0 auto;
+    &__title {
+        padding: 120px 0 80px 0;
+        text-align: center;
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 75px;
+        text-transform: uppercase;
+        color: $color-secondary-100;
+    }
+    .accordion-wrapper {
+        width: 100%;
+        margin: 0 auto;
+        justify-content: space-between;
+        margin-bottom: 200px;
+    
+    }
+    .accordion-items {
+        position: relative;
+        &:first-child {
+            .acc-btn {
+                border-top: 0;
+            }
+        }
+        &:last-child {
+            .acc-btn {
+                border-bottom: 1px solid #C4C4C4;
+            }
+        }
+    }
+    
+    .acc-btn {
+        display: flex;
+        justify-content: space-between;
+        padding: 24px 35px 24px 24px;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 20px;
+        color: #000000;
+        border: none;
+        width: 100%;
+        background: transparent;
+        transition: .5s;
+        border-top: 1px solid #C4C4C4;
+        
+    }
+    
+    .acc-content {
+        display: none;
+        padding: 20px;
+        border-top: none;
+    }
+    .active {
+        display: block;
+        background: #FFFFFF;
+        box-shadow: 0px 16px 18px rgb(68 68 68 / 9%);
+        padding: 24px 46px 24px 39px;
+        
+    }
+    
+    .active-btn {
+        border-top: 0;
+        margin-bottom: 0;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 18px rgba(68, 68, 68, 0.09);
+        color: #DF4E3C;
+        padding-bottom: 0;
+        padding-left: 39px;
+        padding-right: 47px;
+        .minus {
+            opacity: 1;
+        }
+        .plus {
+            opacity: 0;
+        }
+    }
+    
+    .active-block + div {
+        .acc-btn {
+            border-top: 0;
+        }
+    }
+    
+    .minus {
+        position: absolute;
+        opacity: 0;
+        right: 47px;
+    }
+    @media (max-width: 768px) {
+        .accordion-wrapper {
+            margin-bottom: 40px;
+        }
+        &__title {
+            padding: 40px 20px 40px 20px;
+            font-size: 30px;
+        }
+    
+    }
+}
+
+
